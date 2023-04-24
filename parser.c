@@ -27,7 +27,7 @@ int parser(const char *format, conver_t func[], va_list args)
 					printed_chars += r_val;
 					break;
 				}
-				else if (!*(func[i + 1].sym) && *format != ' ')
+				else if (!*(func[i + 1].sym) || *format != ' ')
 				{
 					_putchar('%');
 					_putchar(*format);
