@@ -4,6 +4,7 @@ int hex_check(int, char);
 
 /**
  * print_binary - transform to binary
+ * @list: args passed
  * Return: returning the length
  */
 int print_binary(va_list list)
@@ -43,6 +44,7 @@ int print_binary(va_list list)
 
 /**
  * print_oct - number in octal
+ * @list: args passed
  * Return: returns symbols
  */
 int print_oct(va_list list)
@@ -81,6 +83,8 @@ int print_oct(va_list list)
 }
 
 /**
+ * print_hex - sidna laynssro
+ * @list: args passed
  * Return: chars printed
  */
 int print_hex(va_list list)
@@ -170,6 +174,7 @@ int print_heX(va_list list)
 }
 
 /**
+ * hex_check - checkHex
  * @num: Number to letter
  * Return: Ascii of a letter
  */

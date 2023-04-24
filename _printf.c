@@ -2,7 +2,7 @@
 
 /**
  * _printf - prints string by calling write function for
- * 	right data type
+ * right data type
  * @format: inputed string
  * Return: the printed string
  */
