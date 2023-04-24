@@ -66,7 +66,7 @@ _memcpy - Copies memory
 @dest: Destination buffer
 @src: Source buffer
 @n: Number of bytes to copy
-Ren: A pointer to the destination buffer
+Returnn: A pointer to the destination buffer
 */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
