@@ -176,6 +176,7 @@ int print_heX(va_list list)
 /**
  * hex_check - checkHex
  * @num: Number to letter
+ * @x: idk what this x do
  * Return: Ascii of a letter
  */
 int hex_check(int num, char x)

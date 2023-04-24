@@ -3,7 +3,7 @@
 /**
  * parser - parses each charachter to its specified function
  * @format: inputed string
- * @func: list of functions 
+ * @func: list of functions
  * @args: arguments paassed to the program
  * Return: Amount of chars printed
  */

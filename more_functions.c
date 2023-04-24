@@ -21,7 +21,7 @@ int print_num(va_list args)
     {
         l += _putchar('-');
         num = n * -1;
-}
+    }
     else
         num = n;
 
