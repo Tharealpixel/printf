@@ -61,7 +61,7 @@ unsigned int base_len(unsigned int num, int base)
 }
 
 /**
- * @dest: dest for compy
+ * @dest: dest for copying
  * @src: Source of copying
  * @n: bytes that you have to copy
  */
