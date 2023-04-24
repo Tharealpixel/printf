@@ -8,34 +8,34 @@
  */
 int print_num(va_list args)
 {
-    int n;
-    int d;
-    int l;
-    unsigned int num;
+	int n;
+	int d;
+	int l;
+	unsigned int num;
 
-    n  = va_arg(args, int);
-    d = 1;
-    l = 0;
+	n  = va_arg(args, int);
+	d = 1;
+	l = 0;
 
-    if (n < 0)
-    {
-        l += _putchar('-');
-        num = n * -1;
-    }
-    else
-        num = n;
+	if (n < 0)
+	{
+		l += _putchar('-');
+		num = n * -1;
+	}
+	else
+		num = n;
 
-    for (; num / d > 9; )
-        d *= 10;
+	for (; num / d > 9; )
+		d *= 10;
 
-    for (; d != 0; )
-    {
-        l += _putchar('0' + num / d);
-        num %= d;
-        d /= 10;
-    }
+	for (; d != 0; )
+	{
+		l += _putchar('0' + num / d);
+		num %= d;
+		d /= 10;
+	}
 
-    return (l);
+	return (l);
 }
 /**
  * print_unsigned_num - Prints studf!!
@@ -44,24 +44,24 @@ int print_num(va_list args)
  */
 int print_unsigned_num(unsigned int n)
 {
-    int d;
-    int l;
-    unsigned int num;
+	int d;
+	int l;
+	unsigned int num;
 
-    d = 1;
-    l = 0;
+	d = 1;
+	l = 0;
 
-    num = n;
+	num = n;
 
-    for (; num / d > 9; )
-        d = d * 10;
+	for (; num / d > 9; )
+		d = d * 10;
 
-    for (; d != 0; )
-    {
-        l += _putchar('0' + num / d);
-        num %= d;
-        d /= 10;
-    }
+	for (; d != 0; )
+	{
+		l += _putchar('0' + num / d);
+		num %= d;
+		d /= 10;
+	}
 
-    return (l);
+	return (l);
 }
