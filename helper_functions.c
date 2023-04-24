@@ -61,6 +61,7 @@ unsigned int base_len(unsigned int num, int base)
 }
 
 /**
+ * _memcpy - Copies memory
  * @dest: dest for copying
  * @src: Source of copying
  * @n: bytes that you have to copy
