@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_reversed - reverse then print string
+ * print_rever - reverse then print string
  * @arg: arg of the func
  * Return: how many chars printed
  */

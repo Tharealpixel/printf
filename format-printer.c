@@ -8,7 +8,7 @@
  */
 int print_c(va_list c)
 {
-    _putchar(va_arg(c, int));
+	_putchar(va_arg(c, int));
 	return (1);
 }
 
@@ -19,7 +19,7 @@ int print_c(va_list c)
  */
 int print_str(va_list s)
 {
-    int i;
+	int i;
 	char *str;
 
 	str = va_arg(s, char *);
@@ -55,7 +55,7 @@ int print_int(va_list i)
 }
 
 /**
- * unsigned_integer - Prints Unsigned integers
+ * unsigned_int - Prints Unsigned integers
  * @un: unsigned stuff
  * Return: -1 if negative or cou t of numbers
  */
