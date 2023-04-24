@@ -125,9 +125,9 @@ int print_hex(va_list list)
 
 
 /**
- * print_heX - Prints a representation of a decimal number on base16 Uppercase
- * @list: List of the arguments passed to the function
- * Return: Number of characters printed
+ * print_heX - decimal on base 16
+ * @list: args passed
+ * Return: chars printed
  */
 int print_heX(va_list list)
 {
@@ -170,10 +170,8 @@ int print_heX(va_list list)
 }
 
 /**
- * hex_check - Checks which hex function is calling it
- * @num: Number to convert into letter
- * @x: Tells which hex function is calling it
- * Return: Ascii value for a letter
+ * @num: Number to letter
+ * Return: Ascii of a letter
  */
 int hex_check(int num, char x)
 {
