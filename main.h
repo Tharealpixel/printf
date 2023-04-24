@@ -6,6 +6,8 @@
 #include <stdarg.h>
 /**
  * struct convert - defines a structure
+ * @sym: operator
+ * @f: function
 */
 struct convert
 {
