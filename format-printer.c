@@ -61,14 +61,14 @@ int print_int(va_list i)
  */
 int unsigned_int(va_list un)
 {
-    unsigned int num;
+	unsigned int num;
 
-    num = va_arg(un, unsigned int);
+	num = va_arg(un, unsigned int);
 
-    if (num == 0)
-            return (print_unsigned_num(num));
+	if (num == 0)
+		return (print_unsigned_num(num));
 
-    if (num < 1)
-            return (-1);
-    return (print_unsigned_num(num));
+	if (num < 1)
+		return (-1);
+	return (print_unsigned_num(num));
 }

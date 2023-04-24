@@ -4,7 +4,9 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdarg.h>
-
+/**
+ * struct convert - defines a structure
+*/
 struct convert
 {
     char *sym;
