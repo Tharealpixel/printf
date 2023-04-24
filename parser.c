@@ -10,7 +10,7 @@
 int parser(const char *format, conver_t func[], va_list args)
 {
 	int printed_chars = 0;
-	int i, rval;
+	int i, r_val;
 
 	while (*format)
 	{
