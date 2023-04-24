@@ -32,6 +32,7 @@ char *rev_string(char *s)
 }
 
 /**
+ * write_base - writes base lol
  * @str: String to parse
  */
 void write_base(char *str)
