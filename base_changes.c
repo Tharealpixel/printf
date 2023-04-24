@@ -3,9 +3,8 @@
 int hex_check(int, char);
 
 /**
- * print_binary - Converts a number from base 10 to binary
- * @list: List of arguments passed to this function
- * Return: The length of the number printed
+ * print_binary - transform to binary
+ * Return: returning the length
  */
 int print_binary(va_list list)
 {
@@ -43,9 +42,8 @@ int print_binary(va_list list)
 }
 
 /**
- * print_octal - Prints the numeric representation of a number in octal base
- * @list: List of all the arguments passed to the program
- * Return: Number of symbols printed to stdout
+ * print_octal - number in octal
+ * Return: returns symbols
  */
 int print_octal(va_list list)
 {
