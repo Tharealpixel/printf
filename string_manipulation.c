@@ -5,7 +5,7 @@
  * @arg: arg of the func
  * Return: how many chars printed
  */
-int print_reversed(va_list arg)
+int print_rever(va_list arg)
 {
 	int len;
 	char *str;

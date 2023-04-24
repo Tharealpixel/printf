@@ -42,10 +42,10 @@ int print_binary(va_list list)
 }
 
 /**
- * print_octal - number in octal
+ * print_oct - number in octal
  * Return: returns symbols
  */
-int print_octal(va_list list)
+int print_oct(va_list list)
 {
 	unsigned int num;
 	int len;
