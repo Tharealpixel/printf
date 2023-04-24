@@ -9,42 +9,37 @@
  */
 int parser(const char *format, conver_t func[], va_list args)
 {
-	int i, j, r_val, printed_chars;
-
-	printed_chars = 0;
-	for (i = 0; format[i] != '\0'; i++)
+	int printed_chars = 0;
+	while (*format)
 	{
-		if (format[i] == '%')
+		if (*format == '%')
 		{
-			for (j = 0; func[j].sym != NULL; j++)
+			format++;
+			for (int i = 0; func[i].sym; i++)
 			{
-				if (format[i + 1] == func[j].sym[0])
+				if (*format == *(func[i].sym))
 				{
-					r_val = func[j].f(args);
-					if (r_val == -1)
+					int r_val = func[i].f(args);
+					if (r_val < 0)
 						return (-1);
 					printed_chars += r_val;
 					break;
 				}
-			}
-			if (func[j].sym == NULL && format[i + 1] != ' ')
-			{
-				if (format[i + 1] != '\0')
+				else if (!*(func[i + 1].sym) && *format != ' ')
 				{
-					_putchar(format[i]);
-					_putchar(format[i + 1]);
-					printed_chars = printed_chars + 2;
+					_putchar('%');
+					_putchar(*format);
+					printed_chars += 2;
+					break;
 				}
-				else
-					return (-1);
 			}
-			i++;
 		}
 		else
 		{
-			_putchar(format[i]);
+			_putchar(*format);
 			printed_chars++;
 		}
+		format++;
 	}
 	return (printed_chars);
 }
