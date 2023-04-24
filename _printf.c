@@ -11,8 +11,8 @@ int _printf(const char *format, ...)
 	int printed_c;
 	conver_t func[] = {
 		{"c", print_c},
-		{"s", print_s},
-		{"%", print_%},
+		{"s", print_str},
+		{"%", print_per},
 		{NULL, NULL}
 	};
 	va_list args;
@@ -22,8 +22,8 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	printed_string = parser(format, func, args);
+	printed_c = parser(format, func, args);
 
 	va_end(args);
-	return (printed_string);
+	return (printed_c);
 }

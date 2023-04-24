@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdarg.h>
 /**
  * parser - parses each charachter to its specified function
  * @format: inputed string
@@ -12,7 +12,7 @@ int parser(const char *format, conver_t func[], va_list args)
 	int i, j, r_val, printed_chars;
 
 	printed_chars = 0;
-	for (i = 0; format[i] != NULL; i++)
+	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
 		{
@@ -38,7 +38,7 @@ int parser(const char *format, conver_t func[], va_list args)
 				else
 					return (-1);
 			}
-			i = i + 1;
+			i++;
 		}
 		else
 		{
