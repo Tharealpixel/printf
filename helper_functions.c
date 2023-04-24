@@ -61,12 +61,11 @@ unsigned int base_len(unsigned int num, int base)
 }
 
 /**
-
-_memcpy - Copies memory
-@dest: Destination buffer
-@src: Source buffer
-@n: Number of bytes to copy
-Return: A pointer to the destination buffer
+ * _memcpy - Copies memory
+ * @dest: Destination buffer
+ * @src: Source buffer
+ * @n: Number of bytes to copy
+ * Return: A pointer to the destination buffer
 */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
