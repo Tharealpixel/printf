@@ -55,11 +55,11 @@ int print_int(va_list i)
 }
 
 /**
- * unsigned_int - Prints Unsigned integers
+ * print_un_int - Prints Unsigned integers
  * @un: unsigned stuff
  * Return: -1 if negative or cou t of numbers
  */
-int unsigned_int(va_list un)
+int print_un_int(va_list un)
 {
 	unsigned int num;
 

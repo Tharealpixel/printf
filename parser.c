@@ -21,6 +21,9 @@ int parser(const char *format, conver_t func[], va_list args)
 		if (*format == '%')
 		{
 			format++;
+			if (*format == '\0')
+				break;
+
 			for (i = 0; func[i].sym != NULL; i++)
 			{
 				if (*format == *(func[i].sym))

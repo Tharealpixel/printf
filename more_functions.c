@@ -45,11 +45,11 @@ int print_num(va_list args)
 int print_unsigned_num(unsigned int n)
 {
 	int d;
-	int l;
+	int len;
 	unsigned int num;
 
 	d = 1;
-	l = 0;
+	len = 0;
 
 	num = n;
 
@@ -58,10 +58,26 @@ int print_unsigned_num(unsigned int n)
 
 	for (; d != 0; )
 	{
-		l += _putchar('0' + num / d);
+		len += _putchar('0' + num / d);
 		num %= d;
 		d /= 10;
 	}
 
-	return (l);
+	return (len);
+}
+
+/**
+ * print_ptr - prints adress
+ * @list: list of args
+ * Return: len
+ */
+int print_ptr(va_list list)
+{
+	int len = 0;
+
+	len += _putchar('0');
+	len += _putchar('x');
+	len += print_hex(list);
+
+	return (len);
 }

@@ -83,50 +83,39 @@ int print_oct(va_list list)
 }
 
 /**
- * print_hex - sidna laynssro
- * @list: args passed
- * Return: chars printed
+ * print_hex - prints an unsigned int in hexadecimal format (lowercase)
+ * @args: va_list containing the unsigned integer to print
+ * Return: number of characters printed
  */
-int print_hex(va_list list)
+int print_hex(va_list args)
 {
-	unsigned int num;
-	int len;
-	int rem_num;
-	char *hex_rep;
-	char *rev_hex;
-
-	num = va_arg(list, unsigned int);
+	unsigned int num = va_arg(args, unsigned int);
+	char hex[100];
+	int i = 0, len = 0;
 
 	if (num == 0)
 		return (_putchar('0'));
-	if (num < 1)
-		return (-1);
-	len = base_len(num, 16);
-	hex_rep = malloc(sizeof(char) * len + 1);
-	if (hex_rep == NULL)
-		return (-1);
-	for (len = 0; num > 0; len++)
+
+	while (num != 0)
 	{
-		rem_num = num % 16;
-		if (rem_num > 9)
-		{
-			rem_num = hex_check(rem_num, 'x');
-			hex_rep[len] = rem_num;
-		}
+		int temp = 0;
+
+		temp = num % 16;
+		if (temp < 10)
+			hex[i] = temp + 48;
 		else
-			hex_rep[len] = rem_num + 48;
-		num = num / 16;
+			hex[i] = temp + 87;
+		num /= 16;
+		i++;
 	}
-	hex_rep[len] = '\0';
-	rev_hex = rev_string(hex_rep);
-	if (rev_hex == NULL)
-		return (-1);
-	write_base(rev_hex);
-	free(hex_rep);
-	free(rev_hex);
+
+	len = i;
+
+	for (i = len - 1; i >= 0; i--)
+		_putchar(hex[i]);
+
 	return (len);
 }
-
 
 /**
  * print_heX - decimal on base 16

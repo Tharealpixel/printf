@@ -1,34 +1,11 @@
 #include "main.h"
 
 /**
- * print_rever - reverse then print string
- * @arg: arg of the func
- * Return: how many chars printed
- */
-int print_rever(va_list arg)
-{
-	int len;
-	char *str;
-	char *ptr;
-
-	str = va_arg(arg, char *);
-	if (str == NULL)
-		return (-1);
-	ptr = rev_string(str);
-	if (ptr == NULL)
-		return (-1);
-	for (len = 0; ptr[len] != '\0'; len++)
-		_putchar(ptr[len]);
-	free(ptr);
-	return (len);
-}
-
-/**
- * rot13 - to rot13
+ * print_rot13 - to rot13
  * @list: string for converting
  * Return: string converted
  */
-int rot13(va_list list)
+int print_rot13(va_list list)
 {
 	int i;
 	int x;
