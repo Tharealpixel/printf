@@ -1,47 +1,50 @@
 #include "main.h"
 #include <stdarg.h>
+
 /**
- * parser - parses each charachter to its specified function
- * @format: inputed string
- * @func: list of functions
- * @args: arguments paassed to the program
- * Return: Amount of chars printed
+ * parser - parses each character to its specified function
+ * @format: input string
+ * @func: list of conversion functions
+ * @args: variable argument list
+ * Return: number of characters printed
  */
 int parser(const char *format, conver_t func[], va_list args)
 {
-	int printed_chars = 0;
-	int i, r_val;
+	int len = 0;
+	int i, val;
+
+	if (format == NULL)
+		return (-1);
 
 	while (*format)
 	{
 		if (*format == '%')
 		{
 			format++;
-			for (i = 0; func[i].sym; i++)
+			for (i = 0; func[i].sym != NULL; i++)
 			{
 				if (*format == *(func[i].sym))
 				{
-					r_val = func[i].f(args);
-					if (r_val < 0)
+					val = func[i].f(args);
+					if (val < 0)
 						return (-1);
-					printed_chars += r_val;
+					len += val;
 					break;
 				}
-				else if (!*(func[i + 1].sym) || *format != ' ')
-				{
-					_putchar('%');
-					_putchar(*format);
-					printed_chars += 2;
-					break;
-				}
+			}
+			if (func[i].sym == NULL)
+			{
+				_putchar('%');
+				_putchar(*format);
+				len += 2;
 			}
 		}
 		else
 		{
 			_putchar(*format);
-			printed_chars++;
+			len++;
 		}
 		format++;
 	}
-	return (printed_chars);
+	return (len);
 }
